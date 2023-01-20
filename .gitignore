@@ -1,0 +1,5 @@
+src/
+gulpfile.js
+*.jpg
+*.webp
+node_modules/
