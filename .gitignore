@@ -2,4 +2,5 @@ src/
 gulpfile.js
 *.jpg
 *.webp
+*.svg
 node_modules/
