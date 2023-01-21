@@ -1,6 +1,6 @@
 # bienes_raices
 Este proyecto es un sitio web de bienes raíces desarrollado con HTML, CSS y JavaScript. Se trata del inicio del proyecto, en el cual se han creado las páginas de inicio, nosotros, anuncios, blog y contacto.
-Este proyecto utiliza gulp-sass con npm de nodejs para automatizar el proceso de compilación de archivos SASS a CSS. Se recomienda tener nodejs y npm instalados en su computadora antes de continuar.
+Este proyecto utiliza gulp-sass con npm de nodejs para automatizar el proceso de compilación de archivos SASS a CSS. Se recomienda tener nodejs y npm instalados en su computadora antes de continuar en caso de que se pretenda mejorar el proyecto.
 
 En la página de inicio se presenta una descripción general del sitio web y se incluye un menú de navegación que permite acceder a las demás páginas.
 
