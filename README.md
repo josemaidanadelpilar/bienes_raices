@@ -6,6 +6,6 @@ En la página de inicio se presenta una descripción general del sitio web y se 
 
 En la página de "nosotros" se presentan tres iconos con información adicional sobre seguridad, precio y tiempo.
 
-En las páginas de "anuncios", "blog" y "contacto" aún no se han agregado contenido, pero se planea completarlas en etapas posteriores del proyecto.
+En las páginas de "anuncios", "blog" y "contacto" aún no se han agregado contenido, pero voy completarlas en etapas posteriores del proyecto.
 
-Además, se planea implementar un backend con MySQL para almacenar la información de los anuncios y usuarios.
+Además, voy implementar un backend con MySQL para almacenar la información de los anuncios y usuarios, incluyendo la posibilidad de editar in ingresar datos para los anuncios de la pagina.
