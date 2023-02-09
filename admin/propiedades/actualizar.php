@@ -105,24 +105,28 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Revisar que el arreglo de error este vacio
     if (empty($errores)) {
         // // SUBIDA DE ARCHIVOS 
+
+        //Comprueba si la carpeta existe y si no existe la crea 
+        $carpetaImagenes = '../../imagenes/';
+        if (!is_dir($carpetaImagenes)) {
+            mkdir($carpetaImagenes);
+        }
+        // Se eliminar el nombre de la variable $nombreImagen = ""; para evitar eliminar la imagen actual, se extrae de la base de datos directamente el nombre a eliminar en caso de que se actualize 
+        $nombreImagen = "";
+        if ($imagen['name']) {
+            // Eliminar la imagen previa 
+            unlink($carpetaImagenes . $propiedad['imagen'] . ".jpg");
+            $nombreImagen = md5(uniqid(rand(), true));
+            move_uploaded_file($imagen['tmp_name'], $carpetaImagenes . "/" . $nombreImagen . ".jpg");
+        } else {
+            // Se rasigna el nombre a la variable 
+            $nombreImagen = $propiedad['imagen'];
+        }
         // // Crear una carpeta 
-        // $carpetaImagenes = '../../imagenes';
 
-        // //Comprueba si la carpeta existe y si no existe la crea 
-        // if (!is_dir($carpetaImagenes)) {
-        //     mkdir($carpetaImagenes);
-        // }
-        // // Generar un nombre unico a cada imagen
+        // Generar un nombre unico a cada imagen
 
-        // $nombreImagen = md5(uniqid(rand(), true));
-        // // '<pre>';
-        // // var_dump($nombreImagen);
-        // // '</pre>';
-        // // Subir la imagen 
-
-        // move_uploaded_file($imagen['tmp_name'], $carpetaImagenes . "/" . $nombreImagen . ".jpg");
-        
-        $query = "UPDATE propiedades SET titulo = '{$titulo}', precio = {$precio},descripcion = '{$descripcion}',habitaciones = {$habitaciones},wc = {$wc},estacionamiento = {$estacionamiento},vendedorID = {$vendedorId} WHERE id = {$id}";
+        $query = "UPDATE propiedades SET titulo = '{$titulo}', precio = {$precio},imagen = '{$nombreImagen}',descripcion = '{$descripcion}',habitaciones = {$habitaciones},wc = {$wc},estacionamiento = {$estacionamiento},vendedorID = {$vendedorId} WHERE id = {$id}";
         // var_dump($query);
         // exit;
     
