@@ -1,5 +1,10 @@
 <?php
-
+require '../../includes/funciones.php';
+// Incluimos la funciones, para incluir la funcion de estar autenticado 
+$userAuntenticado = estarAutenticado();
+if(!$userAuntenticado){
+    header('Location:/login.php');
+}
 $id = $_GET['id'];
 // Valida que el url sea un entero, evitando que sea un script o sentencia sql 
 $id = filter_var($id, FILTER_VALIDATE_INT);
@@ -142,7 +147,6 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 // Este codigo inicio agrega una clase al header.php para agregar el background-image del de este index.php 
-    require '../../includes/funciones.php';
     
     incluirTemplates('header');
 ?>

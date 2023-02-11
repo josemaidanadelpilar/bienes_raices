@@ -25,100 +25,11 @@
         </div>
     </main>
     <section class="seccion contenedor">
-        <h2>Casas y Depas en Ventas</h2>
-        <div class="contendor-anuncios">
-            <div class="anuncio">
-                <picture>
-                    <source media="(min-width: )" srcset="build/img/anuncio1.webp" type="image/webp">
-                    <source media="(min-width: )" srcset="build/img/anuncio1.jpeg" type="image/webp">
-                    <img loading="lazy" src="build/img/anuncio1.jpg" alt="">
-                </picture>
-                <div class="contenido-anuncio">
-                    <h3>Casa en el Lago </h3>
-                    <p>Cas en el logo con excelente vista, acabados de lujo a un excelente precio</p>
-                    <p class="precio">$3,000,000</p>
-                    <ul class="iconos-caracteristicas"> 
-                        <li>
-                            
-                            <img loading="lazy" src="build/img/icono_wc.svg" alt="icono wc">
-                            <p>3</p>
-                        </li>
-                        <li>
-                            <img loading="lazy" src="build/img/icono_estacionamiento.svg" alt="icono estacionamiento">
-                            <p>3</p>
-                        </li>
-
-                        <li>
-                            <img loading="lazy" src="build/img/icono_dormitorio.svg" alt="icono dormitorio">
-                            <p>4</p>
-                        </li>
-                    </ul>
-                    <a class="boton-amarillo-block" href="anuncios.php">
-                        Ver Propiedad
-                    </a>
-                </div> <!-- contenido anuncio -->
-            </div><!-- anuncio -->
-            <div class="anuncio">
-                <picture>
-                    <source media="(min-width: )" srcset="build/img/anuncio2.webp" type="image/webp">
-                    <source media="(min-width: )" srcset="build/img/anuncio2.jpeg" type="image/webp">
-                    <img loading="lazy" src="build/img/anuncio2.jpg" alt="">
-                </picture>
-                <div class="contenido-anuncio">
-                    <h3>Casa terminado de lujo </h3>
-                    <p>Casa con diseño moderno, asi como tecnoligia inteligente y amueblada</p>
-                    <p class="precio">$2,000,000</p>
-                    <ul class="iconos-caracteristicas">
-                        <li>
-                            <img loading="lazy" src="build/img/icono_wc.svg" alt="icono wc">
-                            <p>3</p>
-                        </li>
-                        <li>
-                            <img loading="lazy" src="build/img/icono_estacionamiento.svg" alt="icono estacionamiento">
-                            <p>3</p>
-                        </li>
-
-                        <li>
-                            <img loading="lazy" src="build/img/icono_dormitorio.svg" alt="icono dormitorio">
-                            <p>4</p>
-                        </li>
-                    </ul>
-                    <a class="boton-amarillo-block" href="anuncios.php">
-                        Ver Propiedad
-                    </a>
-                </div> <!-- contenido anuncio -->
-            </div><!-- anuncio -->
-            <div class="anuncio">
-                <picture>
-                    <source media="(min-width: )" srcset="build/img/anuncio3.webp" type="image/webp">
-                    <source media="(min-width: )" srcset="build/img/anuncio3.jpeg" type="image/webp">
-                    <img loading="lazy" src="build/img/anuncio3.jpg" alt="">
-                </picture>
-                <div class="contenido-anuncio">
-                    <h3>Casa con alberca </h3>
-                    <p>Casa alberca y acabados de lujo en la ciudad, excelente oportunidad</p>
-                    <p class="precio">$3,000,000</p>
-                    <ul class="iconos-caracteristicas"> 
-                        <li>
-                            <img loading="lazy" src="build/img/icono_wc.svg" alt="icono wc">
-                            <p>3</p>
-                        </li>
-                        <li>
-                            <img loading="lazy" src="build/img/icono_estacionamiento.svg" alt="icono estacionamiento">
-                            <p>3</p>
-                        </li>
-
-                        <li>
-                            <img loading="lazy" src="build/img/icono_dormitorio.svg" alt="icono dormitorio">
-                            <p>4</p>
-                        </li>
-                    </ul>
-                    <a class="boton-amarillo-block" href="anuncios.php">
-                        Ver Propiedad
-                    </a>
-                </div> <!-- contenido anuncio -->
-            </div><!-- anuncio -->
-        </div><!-- contenedor anuncio -->
+    <h2>Casas y Depas en Ventas</h2>
+    <?php 
+    $limite = 3;
+    include 'includes/templates/anuncios.php';
+    ?>
     </section>
     <section class="imagen-contacto">
         <h2>Encuentra la casa de tus sueños</h2>

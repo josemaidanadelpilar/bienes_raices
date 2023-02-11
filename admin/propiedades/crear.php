@@ -1,6 +1,12 @@
 <?php
 // Base de datos 
-
+require '../../includes/funciones.php';
+require '../includes/funciones.php';
+// Incluimos la funciones, para incluir la funcion de estar autenticado 
+$userAuntenticado = estarAutenticado();
+if(!$userAuntenticado){
+    header('Location:/login.php');
+}
 require '../../includes/config/databases.php';
 
 $db = conectarDB();
@@ -106,9 +112,9 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Generar un nombre unico a cada imagen
 
         $nombreImagen = md5(uniqid(rand(), true));
-        '<pre>';
-        var_dump($nombreImagen);
-        '</pre>';
+        // '<pre>';
+        // var_dump($nombreImagen);
+        // '</pre>';
         // Subir la imagen 
 
         move_uploaded_file($imagen['tmp_name'], $carpetaImagenes . "/" . $nombreImagen . ".jpg");

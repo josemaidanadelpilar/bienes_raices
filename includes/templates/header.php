@@ -1,5 +1,15 @@
+<?php 
+//Inicia la session en todos los header, el condicional evita que apareca un warning por dos secioines activas 
+
+if(!isset($_SESSION)){
+    session_start();
+}
+$userAuntenticado = $_SESSION['login'] ?? null;
+
+?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,6 +36,9 @@
                         <a href="anuncios.php">Anuncios</a>
                         <a href="blog.php">Blog</a>
                         <a href="contacto.php">Contacto</a>
+                        <?php if($userAuntenticado):?>
+                            <a href="loginOut.php">Cerrar Sesíon</a>
+                        <?php endif; ?>
                     </nav>
                 </div>
             </div> <!-- ESTE ES EL CIERRE DE LA BARRA  -->
